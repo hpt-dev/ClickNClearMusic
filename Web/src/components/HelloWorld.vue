@@ -10,7 +10,7 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
   public info: any = "";
-  public data: any = [];
+  public data: [] | void = [];
 
   async mounted(): Promise<void> {
     this.data = await axios.get("/track/all").then(response => {
