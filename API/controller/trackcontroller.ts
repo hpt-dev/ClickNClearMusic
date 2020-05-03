@@ -15,13 +15,19 @@ export class TrackController implements IController {
   public register(app: Application): void {
     app.route('/track/all')
       .get(async (req: Request, res: Response, next: NextFunction) => {
-        const tracks = this.trackService.getTracks();
+        const tracks = this.trackService.getAll();
         res.json(tracks);
       })
     
     app.route('/track/:id')
       .get(async (req: Request, res: Response, next: NextFunction) => {
-        const track = await this.trackService.getTrack(parseInt(req.params.id));
+        const track = await this.trackService.getById(parseInt(req.params.id));
+        res.json(track);
+      })
+
+      app.route('/track/artist/:artist')
+      .get(async (req: Request, res: Response, next: NextFunction) => {
+        const track = await this.trackService.getByArtist(req.params.artist);
         res.json(track);
       })
      

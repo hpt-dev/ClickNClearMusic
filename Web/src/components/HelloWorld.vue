@@ -1,26 +1,24 @@
 <template>
-  <div class="hello">
-  </div>
+  <div class="hello"></div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import { Component, Prop, Vue } from "vue-property-decorator";
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
-  public info: any = '';
+  public info: any = "";
+  public data: any = [];
 
- async mounted(): Promise<void> {
-    await axios
-    .get('/track/all')  
-    .then(response => {
+  async mounted(): Promise<void> {
+    this.data = await axios.get("/track/all").then(response => {
       this.info = response.data;
     });
 
-      debugger;
-      console.log(this.info);
+    debugger;
+    console.log(this.info);
   }
 }
 </script>

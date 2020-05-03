@@ -4,7 +4,8 @@ import fs from 'fs'
 
 export interface ITrackRepository {
     getAll(): TrackDTO[];
-    get(id: number): TrackDTO | undefined;
+    getById(id: number): TrackDTO | undefined;
+    getByArtist(artist: string): TrackDTO[] | undefined;
 }
 
 @injectable()
@@ -20,8 +21,12 @@ export class TrackRepository implements ITrackRepository {
         return this.data;
     }
 
-    public get(id: number): TrackDTO | undefined {
+    public getById(id: number): TrackDTO | undefined {
         return this.data.find(x => x.id === id);
+    }
+
+    public getByArtist(artist: string): TrackDTO[] | undefined {
+        return this.data.filter(x => x.artist === artist);
     }
 
     private async loadFile(){

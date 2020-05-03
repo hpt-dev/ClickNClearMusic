@@ -1,12 +1,9 @@
-import { injectable } from 'inversify';
-
 export interface ITrackDTO {
     _id?: number;
     artist: string;
     title?: string;
 }
 
-//@injectable()
 export class TrackDTO implements ITrackDTO{
     public id: number;
     public artist: string;

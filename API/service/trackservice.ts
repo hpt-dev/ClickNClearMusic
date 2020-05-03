@@ -4,8 +4,9 @@ import { TrackDTO } from '../model/trackDTO';
 import TYPES from '../types';
 
 export interface ITrackService {
-    getTracks(): Array<TrackDTO>;
-    getTrack(id: number): TrackDTO | undefined;
+    getAll(): Array<TrackDTO>;
+    getById(id: number): TrackDTO | undefined;
+    getByArtist(artist: string): TrackDTO[] | undefined;
 }
 
 @injectable()
@@ -13,11 +14,15 @@ export class TrackService implements ITrackService {
     @inject(TYPES.TrackRepository)
     private trackRepository!: ITrackRepository;
 
-    public getTracks(): Array<TrackDTO> {
+    public getAll(): Array<TrackDTO> {
         return this.trackRepository.getAll();
     }
 
-    public getTrack(id: number): TrackDTO | undefined {
-        return this.trackRepository.get(id);
+    public getById(id: number): TrackDTO | undefined {
+        return this.trackRepository.getById(id);
+    }
+
+    public getByArtist(artist: string): TrackDTO[] | undefined {
+        return this.trackRepository.getByArtist(artist);
     }
 }
