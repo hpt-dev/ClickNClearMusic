@@ -1,7 +1,22 @@
+//import font awesome 
+$fa-font-path: "~font-awesome/fonts";
+
+@import "~font-awesome/scss/variables.scss";
+@import "~font-awesome/scss/mixins.scss";
+@import "~font-awesome/scss/path.scss";
+@import "~font-awesome/scss/core.scss";
+@import "~font-awesome/scss/icons.scss";
+
 // 1. Import the initial variables
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 @import "../node_modules/bulma/sass/utilities/functions";
 
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+
+// Font Variables
+$roboto-slab: 'Roboto Slab', serif;   
+$open-sans: 'Open Sans', sans-serif;
 // 2. Set your own initial variables
 // Update blue
 $blue: #72d0eb;
@@ -9,7 +24,11 @@ $blue: #72d0eb;
 $pink: #ffb3b3;
 $pink-invert: #fff;
 // Add a serif family
-$family-serif: "Merriweather", "Georgia", serif;
+$family-serif: 'Roboto Slab', serif; 
+
+//$body-background-color: #ffb3b3;
+//$hr-background-color	: #ffb3b3;
+//$background: #ffb3b3;
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
