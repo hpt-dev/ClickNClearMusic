@@ -11,7 +11,7 @@ export class IndexController implements IController {
 
   public register(app: Application): void {
     app.route('/').get(function(req: Request, res: Response, nxt: NextFunction) {
-      res.render('index', { title: 'CC Music' });
+      res.render('index', { title: 'Click N Clear Music' });
     });
   }
 }

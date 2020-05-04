@@ -1,4 +1,4 @@
-# cctest
+# VueJS SPA (Mocha/Chai testing)
 
 ## Project setup
 ```
