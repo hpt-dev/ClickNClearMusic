@@ -7,7 +7,7 @@
             <div class="card-content">
               <div class="content">
                 <div class="control has-icons-left has-icons-right">
-                  <input v-model.trim="search" class="input is-large" type="search" />
+                  <input v-model.trim="search" class="input is-large" type="search" placeholder="12 Stone Toddler" />
                   <span class="icon is-medium is-left">
                     <i class="fa fa-search"></i>
                   </span>
@@ -54,7 +54,7 @@ export default class Home extends Vue {
   @Watch("search")
   async searchTracks(): Promise<void> {
     this.searching = true;
-    await axios.get(`/track/artist/${this.search}`).then(response => {
+    await axios.get(`/track/search/${this.search}`).then(response => {
       this.searching = false;
       this.data = response.data;
       this.noResults = response.data.length === 0;

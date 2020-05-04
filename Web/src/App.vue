@@ -3,7 +3,9 @@
     <nav class="navbar has-shadow">
       <div class="container">
         <div class="navbar-brand">
-         <p class="level-item has-text-centered">Click N Clear Music </p>
+          <p class="level-item has-text-centered"> 
+            <a href="/"> Click N Clear Music</a> 
+          </p>
           <div class="navbar-burger burger" data-target="navMenu">
             <span></span>
             <span></span>
@@ -13,13 +15,13 @@
         <div class="navbar-menu" id="navMenu">
           <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">Account</a>
+              <a class="navbar-link">Menu</a>
               <div class="navbar-dropdown">
                 <a class="navbar-item">
-                  <router-link to="/">Home</router-link>
+                  <router-link to="/">Search</router-link>
                 </a>
                 <a class="navbar-item">
-                  <router-link to="/about">About</router-link>
+                  <router-link to="/apidoc">API Documentation</router-link>
                 </a>
                 <hr class="navbar-divider" />
                 <div class="navbar-item">Logout</div>

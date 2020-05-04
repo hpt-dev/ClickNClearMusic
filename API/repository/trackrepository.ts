@@ -6,6 +6,7 @@ export interface ITrackRepository {
     getAll(): TrackDTO[];
     getById(id: number): TrackDTO | undefined;
     getByArtist(artist: string): TrackDTO[] | undefined;
+    search(term: string): TrackDTO[] | undefined;
 }
 
 @injectable()
@@ -27,6 +28,10 @@ export class TrackRepository implements ITrackRepository {
 
     public getByArtist(artist: string): TrackDTO[] | undefined {
         return this.data.filter(x => x.artist === artist);
+    }
+
+    public search(term: string): TrackDTO[] | undefined {
+        return this.data.filter(x => x.artist.includes(term) || x.title.includes(term));
     }
 
     private async loadFile(){

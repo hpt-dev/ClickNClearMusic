@@ -7,6 +7,7 @@ export interface ITrackService {
     getAll(): Array<TrackDTO>;
     getById(id: number): TrackDTO | undefined;
     getByArtist(artist: string): TrackDTO[] | undefined;
+    search(term: string): TrackDTO[] | undefined;
 }
 
 @injectable()
@@ -24,5 +25,9 @@ export class TrackService implements ITrackService {
 
     public getByArtist(artist: string): TrackDTO[] | undefined {
         return this.trackRepository.getByArtist(artist);
+    }
+
+    public search(term: string): TrackDTO[] | undefined {
+        return this.trackRepository.search(term);
     }
 }

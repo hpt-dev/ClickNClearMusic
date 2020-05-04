@@ -30,6 +30,11 @@ export class TrackController implements IController {
         const track = await this.trackService.getByArtist(req.params.artist);
         res.json(track);
       })
-     
+
+      app.route('/track/search/:term')
+      .get(async (req: Request, res: Response, next: NextFunction) => {
+        const track = await this.trackService.search(req.params.term);
+        res.json(track);
+      })
   }
 }
