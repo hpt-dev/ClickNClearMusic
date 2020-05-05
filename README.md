@@ -28,7 +28,8 @@ Contains build file
 # TODO
 1. Added DB backend instead of static json
 2. Updated Repo/Service functions to async and return promise<Type>
-3. logging
-4. server side rendering (https://nuxtjs.org/)
-5. add vuejs state management 
+3. Logging
+4. Server side rendering (https://nuxtjs.org/)
+5. Add vuejs state management 
 6. Error handling
+7. Tidy up web build css/js (e.g 99% of bulma, lodash not needed)

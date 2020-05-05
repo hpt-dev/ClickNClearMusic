@@ -10,7 +10,7 @@ try {
     childProcess.exec('npm run build',  {
         cwd: './API/'
     });
-    // Remove current build and copy files to /prod
+    // Remove prev build and copy files to /prod
     fs.removeSync('../prod/');
     fs.copySync('../API/prod', '../prod/');
     fs.copySync('../API/node_modules', '../prod/node_modules');
