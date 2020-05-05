@@ -5,7 +5,7 @@ try {
     // // build vue SPA 
     exec('npm run build',  {
         cwd: '../Web/'
-    } );
+    });
 
     //build nodejs server ts to js
     exec('npm run build',  {
@@ -18,6 +18,7 @@ try {
         fs.copySync('../API/public', '../prod/public');
         fs.copySync('../API/data', '../prod/data');
         fs.removeSync('../prod/tests');
+        fs.removeSync('../API/prod/');
     });
 } catch (err) {
     console.log(err);
