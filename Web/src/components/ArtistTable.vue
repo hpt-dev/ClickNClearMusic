@@ -2,7 +2,7 @@
   <section class="container">
     <div class="level-item">
       <div class="columns is-multiline is-centered cards-container" id="sectioncontainer">
-        <table class="table">
+        <table class="table is-striped is-hoverable is-fullwidth">
           <thead>
             <tr>
               <th>Id</th>

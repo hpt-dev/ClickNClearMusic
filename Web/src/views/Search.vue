@@ -22,27 +22,24 @@
       </div>
     </section>
     <div class="box"></div>
-    <ArtistTable :tracks="data" v-if="!noResults && !searching" />
-    <section class="container">
-      <div v-if="noResults && !searching">
-        Sorry, no results found.
-      </div>
-      <div v-if="searching">
-        <i>Searching...</i>
-      </div>
+    <section class="container" v-if="noResults || searching">
+      <Notification v-if="searching" :content="searchingMsg" />
+      <Notification v-else :content="noResultMsg" />
     </section>
+    <ArtistTable v-else :tracks="data" />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 import ArtistTable from "@/components/ArtistTable.vue";
+import Notification from "@/components/Notification.vue";
 import _ from "lodash";
 import axios from "axios";
 
 @Component({
   components: {
-    ArtistTable
+    ArtistTable, Notification
   }
 })
 export default class Home extends Vue {
@@ -50,6 +47,8 @@ export default class Home extends Vue {
   public search = "";
   public noResults = true;
   public searching = false;
+  public noResultMsg = "Sorry, no results found.";
+  public searchingMsg = "Searching...";
 
   @Watch("search")
   async searchTracks(): Promise<void> {

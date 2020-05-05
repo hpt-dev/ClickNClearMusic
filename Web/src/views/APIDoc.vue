@@ -14,7 +14,7 @@
       </div>
     </section>
     <div class="box"></div>
-    <table class="table">
+    <table class="table is-striped is-hoverable is-fullwidth">
       <thead>
         <tr>
           <th>Route</th>

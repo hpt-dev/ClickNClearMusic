@@ -4,7 +4,7 @@
       <div class="container">
         <div class="navbar-brand">
           <p class="level-item has-text-centered"> 
-            <a href="/"> Click N Clear Music</a> 
+            <a href="/">Click N Clear Music</a> 
           </p>
           <div class="navbar-burger burger" data-target="navMenu">
             <span></span>
@@ -23,8 +23,6 @@
                 <a class="navbar-item">
                   <router-link to="/apidoc">API Documentation</router-link>
                 </a>
-                <hr class="navbar-divider" />
-                <div class="navbar-item">Logout</div>
               </div>
             </div>
           </div>

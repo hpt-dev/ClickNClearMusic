@@ -31,7 +31,8 @@ export class TrackRepository implements ITrackRepository {
     }
 
     public search(term: string): TrackDTO[] | undefined {
-        return this.data.filter(x => x.artist.includes(term) || x.title.includes(term));
+        return this.data.filter(x => x.artist.toLowerCase().includes(term.toLowerCase()) || 
+                                     x.title.toLowerCase().includes(term.toLowerCase()));
     }
 
     private async loadFile(){
