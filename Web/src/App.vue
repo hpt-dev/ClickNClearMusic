@@ -36,13 +36,13 @@
           <div class="field is-grouped is-grouped-multiline">
             <div class="control">
               <div class="tags has-addons">
-                <a class="tag is-link" href></a>
+                <a class="tag is-link" href="#">ClicknClear Music 2020</a>
                 <span class="tag is-light"></span>
               </div>
             </div>
             <div class="control">
               <div class="tags has-addons">
-                <a class="tag is-link"></a>
+                <a class="tag is-link" href="https://github.com/hpt-dev/ClickNClearMusic">Github Repo</a>
                 <span class="tag is-light">
                   <i class="fa fa-github"></i>
                 </span>
