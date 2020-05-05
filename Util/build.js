@@ -6,7 +6,7 @@ try {
     childProcess.exec('npm run build',  {
         cwd: './Web/'
     });
-    // build nodejs server
+    // build nodejs server ts to js
     childProcess.exec('npm run build',  {
         cwd: './API/'
     });

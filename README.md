@@ -31,3 +31,4 @@ Contains build file
 3. logging
 4. server side rendering (https://nuxtjs.org/)
 5. add vuejs state management 
+6. Error handling
