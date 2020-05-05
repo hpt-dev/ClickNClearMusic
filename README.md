@@ -4,13 +4,6 @@
 3. npm run dev
 4. go to localhost:3000
 
-# Starting (JS/Prod)
-1. Navigate to /Util/
-2. npm install
-3. run node build.js
-4. Navigate to newly created folder /prod/
-5. run node ./bin/www.js
-6. go to localhost:3000
 
 The SPA has already been built (npm install && npm run build from /Web/ will re-build the SPA and place the build files in /API/public/)
 
