@@ -1,5 +1,5 @@
 const fs = require('fs-extra');
-const {exec} = require('child_process');
+const { exec } = require('child_process');
 
 try {
     // // build vue SPA 
